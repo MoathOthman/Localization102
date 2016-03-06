@@ -1,4 +1,3 @@
-
 /* Class = "UIButton"; normalTitle = "Switch Language"; ObjectID = "Cje-ky-EQg"; */
 "Cje-ky-EQg.normalTitle" = "تغيير اللغة";
 
@@ -13,3 +12,7 @@
 
 /* Class = "UIViewController"; title = "Second "; ObjectID = "oPo-J9-SrU"; */
 "oPo-J9-SrU.title" = "الشاشة الثانية";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "qa0-jT-D1A"; */
+"qa0-jT-D1A.text" = "";
+

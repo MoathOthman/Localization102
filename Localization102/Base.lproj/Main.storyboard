@@ -70,12 +70,24 @@
                                     <segue destination="oPo-J9-SrU" kind="show" id="bqL-5r-6Wp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="-2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa0-jT-D1A" customClass="MirroringLabel" customModule="Localization102" customModuleProvider="target">
+                                <rect key="frame" x="20" y="239" width="139" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0h9-Uw-OYh"/>
+                                    <constraint firstAttribute="width" constant="139" id="IYN-wN-bXR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XqB-5F-EF1" firstAttribute="leading" secondItem="OBu-4w-5cn" secondAttribute="leading" id="5im-My-GS4"/>
                             <constraint firstItem="jMW-hU-lgc" firstAttribute="trailing" secondItem="XqB-5F-EF1" secondAttribute="trailing" id="7eI-Z5-BUf"/>
                             <constraint firstItem="OBu-4w-5cn" firstAttribute="top" secondItem="XqB-5F-EF1" secondAttribute="bottom" constant="8" symbolic="YES" id="8vP-PF-t7U"/>
+                            <constraint firstItem="qa0-jT-D1A" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9rg-Ec-sJ6"/>
+                            <constraint firstItem="qa0-jT-D1A" firstAttribute="top" secondItem="jMW-hU-lgc" secondAttribute="bottom" constant="25" id="Guh-PV-gNb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jMW-hU-lgc" secondAttribute="bottom" constant="386" id="IgL-JE-WDz"/>
                             <constraint firstItem="jMW-hU-lgc" firstAttribute="top" secondItem="OBu-4w-5cn" secondAttribute="bottom" constant="10" id="OCl-vB-5Xj"/>
                             <constraint firstItem="Cje-ky-EQg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WH6-5t-TMy"/>
@@ -86,6 +98,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Main View" id="eV5-Ly-eMc"/>
+                    <connections>
+                        <outlet property="programmaticallylocalizedLabel" destination="qa0-jT-D1A" id="8JT-qW-jzY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

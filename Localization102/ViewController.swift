@@ -9,9 +9,10 @@
 import UIKit
 
 class ViewController: MirroringViewController {
-
+    @IBOutlet weak var programmaticallylocalizedLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.programmaticallylocalizedLabel.text = NSLocalizedString("localize me please", comment: "Localize me Label in the main scene")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
