@@ -22,18 +22,20 @@ class ViewController: MirroringViewController {
     }
 
     @IBAction func switchLanguage(sender: UIButton) {
+        var transition: UIViewAnimationOptions = .TransitionFlipFromLeft
         if L102Language.currentAppleLanguage() == "en" {
             L102Language.setAppleLAnguageTo("ar")
 //            UIView.appearance().semanticContentAttribute = .ForceRightToLeft
         } else {
             L102Language.setAppleLAnguageTo("en")
+            transition = .TransitionFlipFromRight
 //            UIView.appearance().semanticContentAttribute = .ForceLeftToRight
         }
         let rootviewcontroller: UIWindow = ((UIApplication.sharedApplication().delegate?.window)!)!
         rootviewcontroller.rootViewController = self.storyboard?.instantiateViewControllerWithIdentifier("rootnav")
         let mainwindow = (UIApplication.sharedApplication().delegate?.window!)!
         mainwindow.backgroundColor = UIColor(hue: 0.6477, saturation: 0.6314, brightness: 0.6077, alpha: 0.8)
-        UIView.transitionWithView(mainwindow, duration: 0.55001, options: .TransitionFlipFromLeft, animations: { () -> Void in
+        UIView.transitionWithView(mainwindow, duration: 0.55001, options: transition, animations: { () -> Void in
             }) { (Bool finished) -> Void in
                 
         }

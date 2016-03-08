@@ -17,7 +17,8 @@ class L102Language {
         let userdef = NSUserDefaults.standardUserDefaults()
         let langArray = userdef.objectForKey(APPLE_LANGUAGE_KEY) as! NSArray
         let current = langArray.firstObject as! String
-        return current
+        let currentWithoutLocale = current.substringToIndex(current.startIndex.advancedBy(2))
+        return currentWithoutLocale
     }
     /// set @lang to be the first in Applelanguages list
     class func setAppleLAnguageTo(lang: String) {
