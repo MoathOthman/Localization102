@@ -8,3 +8,5 @@ https://medium.com/@dark_torch/working-with-localization-in-swift-4a87f0d393a4#.
 #Demo
 
 <iframe src="https://appetize.io/embed/3n0gub76cteka51xtkg3f0jqjc?device=iphone5s&scale=100&autoplay=false&orientation=portrait&deviceColor=black" width="378px" height="800px" frameborder="0" scrolling="no"></iframe>
+
+[Here](https://appetize.io/embed/3n0gub76cteka51xtkg3f0jqjc?device=iphone5s&scale=75&orientation=portrait&osVersion=9.2)
