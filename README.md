@@ -10,3 +10,9 @@ https://medium.com/@dark_torch/working-with-localization-in-swift-4a87f0d393a4#.
 <iframe src="https://appetize.io/embed/3n0gub76cteka51xtkg3f0jqjc?device=iphone5s&scale=100&autoplay=false&orientation=portrait&deviceColor=black" width="378px" height="800px" frameborder="0" scrolling="no"></iframe>
 
 [Here](https://appetize.io/embed/3n0gub76cteka51xtkg3f0jqjc?device=iphone5s&scale=75&orientation=portrait&osVersion=9.2)
+
+#Author 
+ * Twitter : [dark_torch](https://twitter.com/dark_torch)
+ * Website: https://moathothman.com
+ * Check my app PuzzPic http://apple.co/2a6Ow8W
+	
