@@ -11,13 +11,13 @@ extension UIViewController {
     func loopThroughSubViewAndFlipTheImageIfItsAUIImageView(subviews: [UIView]) {
         if subviews.count > 0 {
             for subView in subviews {
-                if subView.isKindOfClass(UIImageView.self) && subView.tag < 0 {
+                if (subView is UIImageView) && subView.tag < 0 {
                     let toRightArrow = subView as! UIImageView
                     if let _img = toRightArrow.image {
-                        toRightArrow.image = UIImage(CGImage: _img.CGImage!, scale:_img.scale , orientation: UIImageOrientation.UpMirrored)
+                        toRightArrow.image = UIImage(cgImage: _img.cgImage!, scale:_img.scale , orientation: UIImageOrientation.upMirrored)
                     }
                 }
-                loopThroughSubViewAndFlipTheImageIfItsAUIImageView(subView.subviews)
+                loopThroughSubViewAndFlipTheImageIfItsAUIImageView(subviews: subView.subviews)
             }
         }
     }
@@ -26,8 +26,7 @@ class MirroringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if L102Language.currentAppleLanguage() == "ar" {
-            loopThroughSubViewAndFlipTheImageIfItsAUIImageView(self.view.subviews)
+            loopThroughSubViewAndFlipTheImageIfItsAUIImageView(subviews: self.view.subviews)
         }
-        self.navigationItem
     }
 }
