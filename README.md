@@ -4,7 +4,7 @@ Localization tutorial in swift focusing on the RTL/TLR issue and changing the la
 This  project is the end result of the tutorial at midum
 https://medium.com/@dark_torch/working-with-localization-in-swift-4a87f0d393a4#.9yq1u7oo9
 
-
+## For SWIFT3 checkout the swift3 branch
 #Demo
 
 <iframe src="https://appetize.io/embed/3n0gub76cteka51xtkg3f0jqjc?device=iphone5s&scale=100&autoplay=false&orientation=portrait&deviceColor=black" width="378px" height="800px" frameborder="0" scrolling="no"></iframe>
