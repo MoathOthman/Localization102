@@ -16,10 +16,9 @@ extension UIApplication {
 
 class L102Localizer: NSObject {
     class func DoTheMagic() {
-        MethodSwizzleGivenClassName(cls: Bundle.self, originalSelector: Selector("localizedStringForKey:value:table:"), overrideSelector: #selector(Bundle.specialLocalizedStringForKey(key:value:table:)))
-        MethodSwizzleGivenClassName(cls: UIApplication.self, originalSelector: Selector("userInterfaceLayoutDirection"), overrideSelector: #selector(getter: UIApplication.cstm_userInterfaceLayoutDirection))
+        MethodSwizzleGivenClassName(cls: Bundle.self, originalSelector: #selector(Bundle.localizedString(forKey:value:table:)), overrideSelector: #selector(Bundle.specialLocalizedStringForKey(key:value:table:)))
+        MethodSwizzleGivenClassName(cls: UIApplication.self, originalSelector: #selector(getter: UIApplication.userInterfaceLayoutDirection), overrideSelector: #selector(getter: UIApplication.cstm_userInterfaceLayoutDirection))
         MethodSwizzleGivenClassName(cls: UILabel.self, originalSelector: #selector(UILabel.layoutSubviews), overrideSelector: #selector(UILabel.cstmlayoutSubviews))
-
     }
 }
 extension UILabel {
@@ -69,6 +68,11 @@ extension Bundle {
         return (bundle.specialLocalizedStringForKey(key: key, value: value, table: tableName))
     }
 }
+func disableMethodSwizzling() {
+    
+}
+
+
 /// Exchange the implementation of two methods of the same Class
 func MethodSwizzleGivenClassName(cls: AnyClass, originalSelector: Selector, overrideSelector: Selector) {
     let origMethod: Method = class_getInstanceMethod(cls, originalSelector);
