@@ -12,20 +12,20 @@ class MirroringLabel: UILabel {
     override func layoutSubviews() {
         if self.tag < 0 {
             if UIApplication.isRTL()  {
-                if self.textAlignment == .Right {
+                if self.textAlignment == .right {
                     return
                 }
             } else {
-                if self.textAlignment == .Left {
+                if self.textAlignment == .left {
                     return
                 }
             }
         }
         if self.tag < 0 {
             if UIApplication.isRTL()  {
-                self.textAlignment = .Right
+                self.textAlignment = .right
             } else {
-                self.textAlignment = .Left
+                self.textAlignment = .left
             }
         }
     }

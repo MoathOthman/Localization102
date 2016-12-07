@@ -120,6 +120,8 @@
 				TargetAttributes = {
 					EC06F66C1C5E50C7009CDE69 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 5YP97VN386;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -298,10 +300,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5YP97VN386;
 				INFOPLIST_FILE = Localization102/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitetorch.Localization102;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -309,10 +313,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5YP97VN386;
 				INFOPLIST_FILE = Localization102/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.whitetorch.Localization102;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

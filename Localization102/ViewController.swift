@@ -21,26 +21,26 @@ class ViewController: MirroringViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func switchLanguage(sender: UIButton) {
-        var transition: UIViewAnimationOptions = .TransitionFlipFromLeft
+    @IBAction func switchTheLanguage(_ sender: UIButton) {
+        var transition: UIViewAnimationOptions = .transitionFlipFromLeft
         if L102Language.currentAppleLanguage() == "en" {
-            L102Language.setAppleLAnguageTo("ar")
-//            UIView.appearance().semanticContentAttribute = .ForceRightToLeft
+            L102Language.setAppleLAnguageTo(lang: "ar")
+            UIView.appearance().semanticContentAttribute = .forceRightToLeft
         } else {
-            L102Language.setAppleLAnguageTo("en")
-            transition = .TransitionFlipFromRight
-//            UIView.appearance().semanticContentAttribute = .ForceLeftToRight
+            L102Language.setAppleLAnguageTo(lang: "en")
+            transition = .transitionFlipFromRight
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
         }
-        let rootviewcontroller: UIWindow = ((UIApplication.sharedApplication().delegate?.window)!)!
-        rootviewcontroller.rootViewController = self.storyboard?.instantiateViewControllerWithIdentifier("rootnav")
-        let mainwindow = (UIApplication.sharedApplication().delegate?.window!)!
+        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
+        rootviewcontroller.rootViewController = self.storyboard?.instantiateViewController(withIdentifier: "rootnav")
+        let mainwindow = (UIApplication.shared.delegate?.window!)!
         mainwindow.backgroundColor = UIColor(hue: 0.6477, saturation: 0.6314, brightness: 0.6077, alpha: 0.8)
-        UIView.transitionWithView(mainwindow, duration: 0.55001, options: transition, animations: { () -> Void in
-            }) { (Bool finished) -> Void in
-                
+        UIView.transition(with: mainwindow, duration: 0.55001, options: transition, animations: { () -> Void in
+        }) { (finished) -> Void in
+            
         }
-
     }
+ 
     
 }
 
