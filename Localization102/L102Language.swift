@@ -26,7 +26,6 @@ class L102Language {
         let userdef = UserDefaults.standard
         userdef.set([lang,currentAppleLanguage()], forKey: APPLE_LANGUAGE_KEY)
         userdef.synchronize()
-        
     }
 
 }
