@@ -56,16 +56,20 @@ extension UIApplication {
     }
 }
 extension Bundle {
-     func specialLocalizedStringForKey(key: String, value: String?, table tableName: String?) -> String {
-        let currentLanguage = L102Language.currentAppleLanguage()
-        var bundle = Bundle();
-        if let _path = Bundle.main.path(forResource: currentLanguage, ofType: "lproj") {
-             bundle = Bundle(path: _path)!
+    func specialLocalizedStringForKey(_ key: String, value: String?, table tableName: String?) -> String {
+        if self == Bundle.main {
+            let currentLanguage = L102Language.currentAppleLanguage()
+            var bundle = Bundle();
+            if let _path = Bundle.main.path(forResource: currentLanguage, ofType: "lproj") {
+                bundle = Bundle(path: _path)!
+            } else {
+                let _path = Bundle.main.path(forResource: "Base", ofType: "lproj")!
+                bundle = Bundle(path: _path)!
+            }
+            return (bundle.specialLocalizedStringForKey(key, value: value, table: tableName))
         } else {
-            let _path = Bundle.main.path(forResource: "Base", ofType: "lproj")!
-            bundle = Bundle(path: _path)!
+            return (self.specialLocalizedStringForKey(key, value: value, table: tableName))
         }
-        return (bundle.specialLocalizedStringForKey(key: key, value: value, table: tableName))
     }
 }
 func disableMethodSwizzling() {
