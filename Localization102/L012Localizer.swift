@@ -60,6 +60,9 @@ extension Bundle {
         if self == Bundle.main {
             let currentLanguage = L102Language.currentAppleLanguage()
             var bundle = Bundle();
+            if let _path = Bundle.main.path(forResource: L102Language.currentAppleLanguageFull(), ofType: "lproj") {
+                bundle = Bundle(path: _path)!
+            }else
             if let _path = Bundle.main.path(forResource: currentLanguage, ofType: "lproj") {
                 bundle = Bundle(path: _path)!
             } else {
