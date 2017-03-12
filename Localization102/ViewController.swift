@@ -41,6 +41,13 @@ class ViewController: MirroringViewController {
         }
     }
  
+    @IBAction func didEnd(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func end(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     
 }
 

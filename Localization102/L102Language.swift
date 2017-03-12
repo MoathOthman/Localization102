@@ -36,5 +36,7 @@ class L102Language {
         userdef.synchronize()
     }
 
-     
+    class var isRTL: Bool {
+        return L102Language.currentAppleLanguage() == "ar"
+    }
 }
