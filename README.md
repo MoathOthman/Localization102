@@ -1,3 +1,5 @@
+Better To Use https://github.com/MoathOthman/MOLH , as its easier to use and support pods. 
+
 # Localization102
 Localization tutorial in swift focusing on the RTL/TLR issue and changing the language without restarting
 
