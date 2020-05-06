@@ -14,7 +14,7 @@ extension UIViewController {
                 if (subView is UIImageView) && subView.tag < 0 {
                     let toRightArrow = subView as! UIImageView
                     if let _img = toRightArrow.image {
-                        toRightArrow.image = UIImage(cgImage: _img.cgImage!, scale:_img.scale , orientation: UIImageOrientation.upMirrored)
+                        toRightArrow.image = UIImage(cgImage: _img.cgImage!, scale:_img.scale , orientation: UIImage.Orientation.upMirrored)
                     }
                 }
                 loopThroughSubViewAndFlipTheImageIfItsAUIImageView(subviews: subView.subviews)

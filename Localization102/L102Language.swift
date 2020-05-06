@@ -15,10 +15,16 @@ class L102Language {
     /// get current Apple language
     class func currentAppleLanguage() -> String{
         let userdef = UserDefaults.standard
-        let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as! NSArray
-        let current = langArray.firstObject as! String
-        let endIndex = current.startIndex
-        let currentWithoutLocale = current.substring(to: current.index(endIndex, offsetBy: 2))
+        var currentWithoutLocale = "Base"
+        if let langArray = userdef.object(forKey: APPLE_LANGUAGE_KEY) as? [String] {
+            if var current = langArray.first {
+                if let range = current.range(of: "-") {
+                    current = String(current[..<range.lowerBound])
+                }
+                
+                currentWithoutLocale = current
+            }
+        }
         return currentWithoutLocale
     }
     
