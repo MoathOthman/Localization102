@@ -27,7 +27,7 @@ class L102Localizer: NSObject {
 }
 
 extension UILabel {
-    public func cstmlayoutSubviews() {
+    @objc public func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         if self.isKind(of: NSClassFromString("UITextFieldLabel")!) {
             return // handle special case with uitextfields
@@ -55,7 +55,7 @@ extension UILabel {
 
 
 extension UITextField {
-    public func cstmlayoutSubviews() {
+    @objc public func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         if self.tag <= 0 {
             if UIApplication.isRTL()  {
@@ -72,7 +72,7 @@ extension UITextField {
 
 var numberoftimes = 0
 extension UIApplication {
-    var cstm_userInterfaceLayoutDirection : UIUserInterfaceLayoutDirection {
+    @objc var cstm_userInterfaceLayoutDirection : UIUserInterfaceLayoutDirection {
         get {
             var direction = UIUserInterfaceLayoutDirection.leftToRight
             if L102Language.currentAppleLanguage() == "ar" {
@@ -83,7 +83,7 @@ extension UIApplication {
     }
 }
 extension Bundle {
-    func specialLocalizedStringForKey(_ key: String, value: String?, table tableName: String?) -> String {
+    @objc func specialLocalizedStringForKey(_ key: String, value: String?, table tableName: String?) -> String {
         if self == Bundle.main {
             let currentLanguage = L102Language.currentAppleLanguage()
             var bundle = Bundle();
@@ -109,8 +109,10 @@ func disableMethodSwizzling() {
 
 /// Exchange the implementation of two methods of the same Class
 func MethodSwizzleGivenClassName(cls: AnyClass, originalSelector: Selector, overrideSelector: Selector) {
-    let origMethod: Method = class_getInstanceMethod(cls, originalSelector);
-    let overrideMethod: Method = class_getInstanceMethod(cls, overrideSelector);
+    guard let origMethod: Method = class_getInstanceMethod(cls, originalSelector),
+        let overrideMethod: Method = class_getInstanceMethod(cls, overrideSelector) else {
+        return
+    }
     if (class_addMethod(cls, originalSelector, method_getImplementation(overrideMethod), method_getTypeEncoding(overrideMethod))) {
         class_replaceMethod(cls, overrideSelector, method_getImplementation(origMethod), method_getTypeEncoding(origMethod));
     } else {

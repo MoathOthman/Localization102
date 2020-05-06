@@ -22,7 +22,7 @@ class ViewController: MirroringViewController {
     }
 
     @IBAction func switchTheLanguage(_ sender: UIButton) {
-        var transition: UIViewAnimationOptions = .transitionFlipFromLeft
+        var transition: UIView.AnimationOptions = .transitionFlipFromLeft
         if L102Language.currentAppleLanguage() == "en" {
             L102Language.setAppleLAnguageTo(lang: "ar")
             UIView.appearance().semanticContentAttribute = .forceRightToLeft

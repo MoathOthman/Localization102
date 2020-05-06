@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2QC-AV-CKr">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2QC-AV-CKr">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +12,7 @@
             <objects>
                 <navigationController storyboardIdentifier="rootnav" id="2QC-AV-CKr" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2mX-2z-pfs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -39,10 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqB-5F-EF1" customClass="MirroringLabel" customModule="Localization102" customModuleProvider="target">
-                                <rect key="frame" x="20" y="79" width="139" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="139" id="WSq-cw-DkS"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="59" width="340" height="75"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -54,8 +48,8 @@
                                     <constraint firstAttribute="height" constant="32" id="wnN-l3-z6x"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-hU-lgc">
-                                <rect key="frame" x="20" y="184" width="139" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMW-hU-lgc">
+                                <rect key="frame" x="20" y="184" width="340" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="H5T-Sy-0RD"/>
                                 </constraints>
@@ -90,7 +84,6 @@
                                     <constraint firstAttribute="width" constant="217" id="Lds-iU-Hr3"/>
                                     <constraint firstAttribute="height" constant="30" id="cG1-lk-tpQ"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -109,6 +102,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jMW-hU-lgc" secondAttribute="bottom" constant="453" id="IgL-JE-WDz"/>
                             <constraint firstItem="jMW-hU-lgc" firstAttribute="top" secondItem="OBu-4w-5cn" secondAttribute="bottom" constant="10" id="OCl-vB-5Xj"/>
                             <constraint firstItem="Cje-ky-EQg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1.5" id="WH6-5t-TMy"/>
+                            <constraint firstAttribute="trailing" secondItem="XqB-5F-EF1" secondAttribute="trailing" constant="15" id="ZQx-sL-rrc"/>
                             <constraint firstItem="OBu-4w-5cn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="b4E-FA-bRS"/>
                             <constraint firstItem="XqB-5F-EF1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="drv-it-hEd"/>
                             <constraint firstItem="Cje-ky-EQg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="98" id="go3-wN-UCP"/>
